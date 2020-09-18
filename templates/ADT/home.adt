@@ -1,0 +1,14 @@
+<#if entries?has_content>
+    <div class="row">
+	<#list entries as curEntry>
+	    <div class="col-md-3">
+		<#assign renderer = curEntry.getAssetRenderer() />
+        <#assign journalArticle = renderer.getArticle() />
+        <@liferay_journal["journal-article"]
+            articleId=journalArticle.getArticleId()
+            ddmTemplateKey="35873"
+            groupId=journalArticle.getGroupId() />
+        </div>
+	</#list>
+	</div>
+</#if>

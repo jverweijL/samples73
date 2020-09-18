@@ -1,0 +1,115 @@
+<#assign VOCABULARY_ID = 20133 />
+<#assign nodeId = -1 />
+
+<#function getHits categoryId>
+    <#assign counter = 0 />
+    
+    <#if entries?has_content>
+    	<#list entries as entry>
+    	    <#if (entry.getAssetCategoryId() == categoryId)>
+    	        <#assign counter = entry.getFrequency()/>
+    		</#if>
+    	</#list>
+    </#if>
+    <#return counter>
+</#function>
+
+<#assign _AssetCategoryLocalService = serviceLocator.findService("com.liferay.asset.kernel.service.AssetCategoryLocalService") />
+<#assign _AssetVocabularyLocalService = serviceLocator.findService("com.liferay.asset.kernel.service.AssetVocabularyLocalService") />
+
+<#assign vocabulary = _AssetVocabularyLocalService.getAssetVocabulary(VOCABULARY_ID) />
+
+<#if vocabulary?has_content>
+    <div id="treeview-checkable" class="treeview">
+    	<ul class="list-group">
+            <#list vocabulary.getCategories() as category>
+            <#if category.isRootCategory()>
+                <#assign nodeId++ />
+                <li class="list-group-item node-treeview-checkable search-result" data-nodeid="${nodeId}"
+					style="color:#D9534F;background-color:undefined;">
+                    <span class="icon expand-icon glyphicon glyphicon-minus"></span>
+                    <span class="icon node-icon"></span>
+                    ${category.getName()} 
+					
+					<span class="badge badge-secondary float-right">
+	                    <span class="badge-item badge-item-expand">
+	                        ${getHits(category.getCategoryId())}
+	                   </span>
+	                </span>
+                
+                <#list _AssetCategoryLocalService.getChildCategories(category.getCategoryId()) as subcategory>
+                    <#assign nodeId++ />
+                    <li class="list-group-item node-treeview-checkable" data-nodeid="${nodeId}"
+						style="color:undefined;background-color:undefined;">
+						    <span class="indent"></span>
+						    <span class="icon expand-icon glyphicon glyphicon-minus"></span>
+                            <span class="icon node-icon"></span>
+                            <a href="${themeDisplay.getURLCurrent()}&category=${subcategory.getCategoryId()}">
+						    ${subcategory.getName()} 
+						<span class="badge badge-secondary float-right">
+	                        <span class="badge-item badge-item-expand">
+	                            ${getHits(subcategory.getCategoryId())}
+	                        </span>
+	                    </span>
+	                    </a>
+                    
+                <#list _AssetCategoryLocalService.getChildCategories(subcategory.getCategoryId()) as subsubcategory>
+                    <#assign nodeId++ />
+                    
+                    <li class="list-group-item node-treeview-checkable" data-nodeid="${nodeId}"
+							style="color:undefined;background-color:undefined;">
+                        <span class="indent"></span>
+                        <span class="indent"></span>
+                        <span class="icon glyphicon"></span>
+                        <span class="icon node-icon"></span>
+                        <a href="${themeDisplay.getURLCurrent()}&category=${subsubcategory.getCategoryId()}">
+                        ${subsubcategory.getName()} 
+							<span class="badge badge-secondary float-right">
+	                            <span class="badge-item badge-item-expand">
+	                                ${getHits(subsubcategory.getCategoryId())}
+	                            </span>
+	                        </span>
+	                        </a>
+	                </li>
+	                
+                </#list>
+                
+                    </li>
+                </#list>
+                
+                </li>
+            </#if>
+            </#list>
+        </ul>
+    </div>
+</#if>
+
+
+
+
+<!-- Inspired by https://jonmiles.github.io/bootstrap-treeview/ -->
+<style type="text/css" id="treeview-checkable-style"> .treeview .list-group-item {
+	cursor: pointer
+}
+
+.treeview span.indent {
+	margin-left: 10px;
+	margin-right: 10px
+}
+
+.treeview span.icon {
+	width: 12px;
+	margin-right: 5px
+}
+
+.treeview .node-disabled {
+	color: silver;
+	cursor: not-allowed
+}
+
+.node-treeview-checkable {
+}
+
+.node-treeview-checkable:not(.node-disabled):hover {
+	background-color: #F5F5F5;
+} </style>

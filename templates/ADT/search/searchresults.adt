@@ -1,0 +1,19 @@
+<#assign journalArticleLocalService = serviceLocator.findService("com.liferay.journal.service.JournalArticleLocalService") />
+
+<#if entries?has_content>
+    <div class="row">
+    
+	<#list entries as entry>
+	<#if entry.getHighlightedTitle()?has_content>
+	<div class="col-md-4">
+		<#assign journalArticle = journalArticleLocalService.fetchLatestArticle((entry.classPK)!0, 0)/>
+		 <@liferay_journal["journal-article"]
+            articleId=journalArticle.getArticleId()
+            ddmTemplateKey="35873"
+            groupId=journalArticle.getGroupId() />  
+            </div>
+        </#if>
+	</#list>
+	</div>
+
+</#if>

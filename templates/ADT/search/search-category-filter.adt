@@ -1,0 +1,20 @@
+<#assign VOCABULARY_ID = 35971 />
+
+<#assign assetCategoryServiceUtil = serviceLocator.findService("com.liferay.asset.kernel.service.AssetCategoryLocalService") />
+
+
+<#if entries?has_content>
+    <ul class="list-group">
+	<#list entries as entry>
+	    <#assign category = assetCategoryServiceUtil.getAssetCategory(entry.getAssetCategoryId()) />
+	    <#if VOCABULARY_ID == category.getVocabularyId()>
+	        <a href="${themeDisplay.getURLCurrent()}&category=${entry.getAssetCategoryId()}">
+	            <li class="list-group-item d-flex justify-content-between align-items-center">
+		            ${entry.getDisplayName()}
+		            <span class="badge badge-primary badge-pill">${entry.getFrequency()}</span>
+    		    </li>
+    		</a>
+		</#if>
+	</#list>
+	</ul>
+</#if>

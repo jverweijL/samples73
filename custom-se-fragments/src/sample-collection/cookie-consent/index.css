@@ -1,0 +1,12 @@
+#cookieconsent {
+	position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: silver;
+   color: white;
+   text-align: center;
+	height: 80px;
+	line-height: 80px;
+	z-index: 999999;
+}

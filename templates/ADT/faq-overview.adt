@@ -1,0 +1,12 @@
+<#if entries?has_content>
+    <div class="accordion" id="accordionExample">
+        <#list entries as curEntry>
+            <#assign renderer = curEntry.getAssetRenderer() />
+            <#assign journalArticle = renderer.getArticle() />
+            <@liferay_journal["journal-article"]
+                articleId=journalArticle.getArticleId()
+                ddmTemplateKey="38866"
+                groupId=journalArticle.getGroupId() />
+        </#list>
+	</div>
+</#if>
