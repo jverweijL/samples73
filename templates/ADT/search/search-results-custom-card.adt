@@ -1,0 +1,24 @@
+<#assign journalArticleLocalService = serviceLocator.findService("com.liferay.journal.service.JournalArticleLocalService") />
+
+<#if entries?has_content>
+    <div class="container">
+        <div class="row">
+	        <#list entries as entry>
+	            <#assign journalArticle = journalArticleLocalService.fetchLatestArticle((entry.classPK)!0, 0)/>
+		        <div class="col-sm-4">
+		            <div class="card" style="">
+                        <img src="${journalArticle.getSmallImageURL()}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">${entry.getHighlightedTitle()}</h5>
+                            <p class="card-text" style="font-size: small;">${entry.getContent()}</p>
+                            <a href="/-/${journalArticle.getUrlTitle()}" class="btn btn-primary">View</a>
+                        </div>
+                        <div class="card-footer text-muted">
+                            ${entry.getCreatorUserName()}
+                        </div>
+                    </div>
+                </div>
+	        </#list>
+	    </div>
+    </div>
+</#if>

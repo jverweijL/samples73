@@ -1,3 +1,5 @@
+<#assign STRUCTURE_TEMPLATE_ID = 35873 />
+
 <#assign journalArticleLocalService = serviceLocator.findService("com.liferay.journal.service.JournalArticleLocalService") />
 
 <#if entries?has_content>
@@ -9,7 +11,7 @@
 		<#assign journalArticle = journalArticleLocalService.fetchLatestArticle((entry.classPK)!0, 0)/>
 		 <@liferay_journal["journal-article"]
             articleId=journalArticle.getArticleId()
-            ddmTemplateKey="35873"
+            ddmTemplateKey="${STRUCTURE_TEMPLATE_ID}"
             groupId=journalArticle.getGroupId() />  
             </div>
         </#if>
