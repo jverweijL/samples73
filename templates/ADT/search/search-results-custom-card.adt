@@ -5,9 +5,14 @@
         <div class="row">
 	        <#list entries as entry>
 	            <#assign journalArticle = journalArticleLocalService.fetchLatestArticle((entry.classPK)!0, 0)/>
+
+                <#assign imgUrl = "https://via.placeholder.com/160x90" />
+	            <#if (journalArticle.getSmallImageURL()?has_content) >
+	                <#assign imgUrl = journalArticle.getSmallImageURL() />
+	            </#if>
 		        <div class="col-sm-4">
 		            <div class="card" style="">
-                        <img src="${journalArticle.getSmallImageURL()}" class="card-img-top" alt="...">
+                        <img src="${imgUrl}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">${entry.getHighlightedTitle()}</h5>
                             <p class="card-text" style="font-size: small;">${entry.getContent()}</p>
