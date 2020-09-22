@@ -29,21 +29,22 @@
 					<li class="list-group-item node-treeview-checkable search-result" data-nodeid="${nodeId}" style="color:#D9534F;background-color:undefined;">
 						<span class="icon expand-icon glyphicon glyphicon-minus"></span>
 						<span class="icon node-icon"></span>
-						${category.getName()} 
-						
-						<span class="badge badge-secondary float-right">
-							<span class="badge-item badge-item-expand">
-								${getHits(category.getCategoryId())}
+						<a href="${httpUtil.setParameter(themeDisplay.getURLCurrent(),'category','${category.getCategoryId()}')}">
+							${category.getName()} 
+							<span class="badge badge-secondary float-right">
+								<span class="badge-item badge-item-expand">
+									${getHits(category.getCategoryId())}
+								</span>
 							</span>
-						</span>
-					
+						</a>
+
 						<#list _AssetCategoryLocalService.getChildCategories(category.getCategoryId()) as subcategory>
 							<#assign nodeId++ />
 							<li class="list-group-item node-treeview-checkable" data-nodeid="${nodeId}" style="color:undefined;background-color:undefined;">
 								<span class="indent"></span>
 								<span class="icon expand-icon glyphicon glyphicon-minus"></span>
 								<span class="icon node-icon"></span>
-								<a href="${themeDisplay.getURLCurrent()}&category=${subcategory.getCategoryId()}">
+								<a href="${httpUtil.setParameter(themeDisplay.getURLCurrent(),'category','${subcategory.getCategoryId()}')}">
 									${subcategory.getName()} 
 									<span class="badge badge-secondary float-right">
 										<span class="badge-item badge-item-expand">
@@ -60,7 +61,7 @@
 										<span class="indent"></span>
 										<span class="icon glyphicon"></span>
 										<span class="icon node-icon"></span>
-										<a href="${themeDisplay.getURLCurrent()}&category=${subsubcategory.getCategoryId()}">
+										<a href="${httpUtil.setParameter(themeDisplay.getURLCurrent(),'category','${subsubcategory.getCategoryId()}')}">
 											${subsubcategory.getName()} 
 											<span class="badge badge-secondary float-right">
 												<span class="badge-item badge-item-expand">

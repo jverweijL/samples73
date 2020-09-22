@@ -1,0 +1,7 @@
+<#if entries?has_content>
+	<#list entries as entry>
+	    <a href="${httpUtil.setParameter(themeDisplay.getURLCurrent(),'sort','${entry.getField()}')}"
+	        <@clay["label"] displayType="secondary" button="true" label="${entry.getLanguageLabel()}" />
+	    </a>
+	</#list>
+</#if>
