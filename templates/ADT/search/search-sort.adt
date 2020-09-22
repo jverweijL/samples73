@@ -1,7 +1,12 @@
 <#if entries?has_content>
 	<#list entries as entry>
+		<#if (entry.getField()?url('ISO-8859-1') == httpUtil.getParameter(themeDisplay.getURLCurrent(),'sort',false)) >
+			<#assign displayType = "info" />
+		<#else>
+			<#assign displayType = "secondary" />
+		</#if>
 	    <a href="${httpUtil.setParameter(themeDisplay.getURLCurrent(),'sort','${entry.getField()}')}"
-	        <@clay["label"] displayType="secondary" button="true" label="${entry.getLanguageLabel()}" />
+	        <@clay["label"] displayType="${displayType}" button="true" label="${entry.getLanguageLabel()}" />
 	    </a>
 	</#list>
 </#if>
