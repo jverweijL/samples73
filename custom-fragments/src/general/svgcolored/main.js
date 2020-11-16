@@ -9,7 +9,7 @@ const images = fragmentElement.querySelectorAll("img");
 			
 			const paths = svg.querySelectorAll("path");
 			paths.forEach(path => {
-				if (path.getAttribute('fill') == configuration.oldColor) path.setAttribute('fill',configuration.newColor)
+				if (path.getAttribute('fill').toLowerCase() == configuration.oldColor.toLowerCase()) path.setAttribute('fill',configuration.newColor)
 				//console.log("-" + path.getAttribute('fill'));
 			});
 
