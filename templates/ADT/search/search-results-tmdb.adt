@@ -1,0 +1,6 @@
+<#if entries?has_content>
+	<#list searchResultsPortletDisplayContext.getDocuments() as entry>
+		${entry.getClass()}
+		${entry.getField("snippet_title").getValue()}
+	</#list>
+</#if>

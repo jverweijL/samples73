@@ -1,0 +1,25 @@
+{
+  "name": "custom-fragments",
+  "description": "Liferay Fragments project",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">= 8.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "keywords": [
+    "liferay",
+    "liferay-fragments"
+  ],
+  "scripts": {
+    "add-collection": "yo liferay-fragments:collection",
+    "add-fragment": "yo liferay-fragments:fragment",
+    "compress": "yo liferay-fragments:compress",
+    "export": "yo liferay-fragments:export",
+    "import": "yo liferay-fragments:import",
+    "import:watch": "yo liferay-fragments:import --watch"
+  },
+  "devDependencies": {
+    "generator-liferay-fragments": "^1.8.0",
+    "yo": "^3.1.1"
+  }
+}
