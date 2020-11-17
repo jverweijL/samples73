@@ -11,7 +11,7 @@
                         "placeholder": "Placeholder"
                     },
                     "dataType": "string",
-                    "defaultValue": "@tudelft"
+                    "defaultValue": "@liferay"
                 },
                 {
                     "name": "numberOfTweets",
