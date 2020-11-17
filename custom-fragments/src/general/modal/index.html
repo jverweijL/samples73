@@ -1,0 +1,64 @@
+<button
+	class="btn btn-primary"
+	data-target="#claySmallModal"
+	data-toggle="modal"
+	type="button">
+	<lfr-editable:text>Small Modal</lfr-editable:text>
+</button>
+<div
+	aria-labelledby="claySmallModalLabel"
+	class="fade modal"
+	id="claySmallModal"
+	role="dialog"
+	tabindex="-1"
+	aria-hidden="true"
+	style="display: none;"
+>
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="modal-title" id="claySmallModalLabel">
+					<lfr-editable:text>Modal Title</lfr-editable:text>
+				</div>
+				<button
+					aria-labelledby="Close"
+					class="close"
+					data-dismiss="modal"
+					role="button"
+					type="button"
+				>
+					<svg
+						class="lexicon-icon lexicon-icon-times"
+						focusable="false"
+						role="presentation"
+					>
+						<use href="/images/icons/icons.svg#times"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h4>Modal Body</h4>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-item-last">
+					<div class="btn-group">
+						<div class="btn-group-item">
+							<button
+								class="btn btn-secondary"
+								data-dismiss="modal"
+								type="button"
+							>
+								Close
+							</button>
+						</div>
+						<div class="btn-group-item">
+							<button class="btn btn-primary" type="button">
+								Primary
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

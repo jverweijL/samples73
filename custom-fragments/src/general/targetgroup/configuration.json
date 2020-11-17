@@ -1,0 +1,30 @@
+{
+  "fieldSets": [
+      {
+          "label": "targetgroup",
+          "fields": [
+              {
+                  "name": "targetgroupApplied",
+                  "label": "applied-targetgroup",
+                  "description": "this-is-the-targetgroup",
+                  "type": "select",
+                  "dataType": "string",
+                  "typeOptions": {
+                      "validValues": [
+                        {
+                            "value": "accountant"
+                        },
+                        {
+                            "value": "lawyer"
+                        },
+                        {
+                            "value": "merchant"
+                        }
+                      ]
+                  },
+                  "defaultValue": "accountants"
+              }
+          ]
+      }
+  ]
+}

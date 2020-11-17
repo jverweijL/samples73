@@ -1,0 +1,32 @@
+.lifebank-section-slider .carousel-caption {
+	bottom: 50%;
+	left: 0;
+	right: 0;
+	transform: translateY(50%);
+}
+
+.lifebank-section-slider .carousel-item img {
+  filter: brightness(65%);
+}
+
+.lifebank-section-slider .carousel-caption h1 {
+  color: #ffffff;
+  font-size: 52px;
+  font-weight: bold;
+}
+
+.lifebank-section-slider .carousel-caption p,
+.lifebank-section-slider .carousel-caption p + div {
+  color: #ffffff;
+  max-width: 600px;
+  font-family: "Raleway", sans-serif;
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lifebank-section-slider .carousel-indicators {
+    top: 65px;
+    bottom: auto;
+}

@@ -1,0 +1,30 @@
+{
+    "fieldSets": [
+        {
+            "fields": [
+                {
+                    "name": "twitterHandle",
+                    "label": "Twitter Handle",
+                    "description": "Twitter Handle",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "Placeholder"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "@tudelft"
+                },
+                {
+                    "name": "numberOfTweets",
+                    "label": "Number of tweets to show",
+                    "description": "number-of-tweets",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "Placeholder"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "3"
+                }
+            ]
+        }
+    ]
+}

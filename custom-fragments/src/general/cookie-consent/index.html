@@ -1,0 +1,14 @@
+<div id="cookieconsent" class="mt-auto py-3">
+	<div class="container clearfix">
+  	<div class="float-left mr-1">This website uses cookies to ensure you get the best experience on our website.</div> 
+		<lfr-editable id="cookie" type="link" class="float-left mr-3"><a href="#">Learn more</a></lfr-editable> 
+		<div class="float-left"><button type="button" class="btn btn-primary" onclick="setConsent()"><lfr-editable id="btn-text" type="text">Got it!</lfr-editable></button></div>
+  </div>
+</div>
+
+<script>
+function setConsent() {
+  document.cookie = "consent=true";
+	location.reload();
+}
+</script>

@@ -1,0 +1,39 @@
+{
+    "fieldSets": [
+        {
+            "fields": [
+                {
+                    "name": "BadgeType",
+                    "label": "Alert Type",
+                    "description": "urgency",
+                    "type": "select",
+                    "dataType": "string",
+                    "typeOptions": {
+                        "validValues": [
+                            {"value": "primary"},
+                            {"value": "secondary"},
+                            {"value": "light"},
+                            {"value": "dark"},
+                            {"value": "danger"},
+                            {"value": "success"},
+                            {"value": "warning"},
+                            {"value": "info"}
+                        ]
+                    },
+                    "defaultValue": "primary"
+                },
+                {
+                    "name": "labelText",
+                    "label": "Label Text",
+                    "description": "button-text",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "Placeholder"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "100"
+                }
+            ]
+        }
+    ]
+}

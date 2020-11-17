@@ -1,0 +1,19 @@
+{
+    "fieldSets": [
+        {
+            "fields": [
+                {
+                    "name": "youtubeID",
+                    "label": "Enter youtube ID",
+                    "description": "You can find the ID in the Share link",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "Copy and paste the youtube ID here"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "pG2N0idrRTs"
+                }
+            ]
+        }
+    ]
+}

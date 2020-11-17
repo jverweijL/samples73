@@ -1,0 +1,17 @@
+<div class="component-paragraph-deluxe pb-${configuration.bottomSpacing} text-${configuration.textColor.cssClass} text-${configuration.textAlign} text-break">
+  [#if configuration.boldy]
+  <strong>
+  [/#if]
+  [#if configuration.italicy]
+  <em>
+  [/#if]
+    <lfr-editable id="element-text" type="rich-text">
+      A paragraph is a self-contained unit of a discourse in writing dealing with a particular point or idea. Paragraphs are usually an expected part of formal writing, used to organize longer prose.
+    </lfr-editable>
+  [#if configuration.italicy]
+  </em>
+  [/#if]
+  [#if configuration.boldy]
+  </strong>
+  [/#if]
+</div>

@@ -1,0 +1,53 @@
+{
+    "fieldSets": [
+        {
+            "fields": [
+                {
+                    "name": "AlertType",
+                    "label": "Alert Type",
+                    "description": "urgency",
+                    "type": "select",
+                    "dataType": "string",
+                    "typeOptions": {
+                        "validValues": [
+                            {"value": "alert-danger"},
+                            {"value": "alert-success"},
+                            {"value": "alert-warning"},
+                            {"value": "alert-info"}
+                        ]
+                    },
+                    "defaultValue": "alert-danger"
+                },
+                {
+                    "name": "labelText",
+                    "label": "Label Text",
+                    "description": "button-text",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "Placeholder"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "Error:"
+                },
+                {
+                    "name": "leadText",
+                    "label": "Button Text",
+                    "description": "button-text",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "Placeholder"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "This is an error message!"
+                },
+                {
+                    "name": "autoHide",
+                    "label": "Hide Alert Automatically",
+                    "description": "hide-body",
+                    "type": "checkbox",
+                    "defaultValue": true
+                }
+            ]
+        }
+    ]
+}

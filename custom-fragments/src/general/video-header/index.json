@@ -1,0 +1,26 @@
+{
+    "fieldSets": [
+        {
+            "fields": [
+                {
+                    "name": "videoURL",
+                    "label": "Video URL",
+                    "description": "video-url",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4"
+                },
+                {
+                    "name": "showTextbox",
+                    "label": "Show Textbox",
+                    "description": "show-textbox",
+                    "type": "checkbox",
+                    "defaultValue": true
+                }
+            ]
+        }
+    ]
+}

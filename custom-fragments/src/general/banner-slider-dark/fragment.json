@@ -1,0 +1,8 @@
+{
+    "configurationPath":"configuration.json",
+    "jsPath":"index.js",
+    "htmlPath":"index.html",
+    "cssPath":"index.css",
+    "name":"Banner Slider Dark",
+    "type":"section"
+}

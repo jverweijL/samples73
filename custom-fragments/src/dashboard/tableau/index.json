@@ -1,0 +1,30 @@
+{
+    "fieldSets": [
+        {
+            "fields": [
+                {
+                    "name": "reportName",
+                    "label": "Report Name",
+                    "description": "report-name",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "Placeholder"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "WorldIndicators/GDPpercapita"
+                },
+                {
+                    "name": "hostUrl",
+                    "label": "Host Url",
+                    "description": "host-url",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "Placeholder"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "https://public.tableau.com/"
+                }
+            ]
+        }
+    ]
+}

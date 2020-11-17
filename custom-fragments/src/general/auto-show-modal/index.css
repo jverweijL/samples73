@@ -1,0 +1,16 @@
+.fragment-modal-open .fragment-entry-link-wrapper[fragment-modal="true"],
+.fragment-modal-open .fragments-editor__floating-toolbar-buttons,
+.fragment-modal-open [class*="ae-toolbar-"][role="toolbar"],
+.fragment-modal-open .fragments-editor__floating-toolbar-buttons,
+.fragment-modal-open .fragments-editor__floating-toolbar-panel {
+	z-index: 1045;
+}
+
+.fragments-editor .fragment-modal-root .show-modal-btn,
+.fragment-preview .fragment-modal-root .show-modal-btn {
+	display: block !important;
+}
+
+.fragment-modal-root img {
+	max-width: 100%;
+}
