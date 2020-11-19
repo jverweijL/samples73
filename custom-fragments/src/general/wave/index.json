@@ -1,0 +1,30 @@
+{
+    "fieldSets": [
+        {
+            "fields": [
+                {
+                    "name": "mainColor",
+                    "label": "Main Color (hex)",
+                    "description": "main-color-text",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "#134194"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "#134194"
+                },
+                {
+                    "name": "secondaryColor",
+                    "label": "Secondary Color (hex)",
+                    "description": "secondary-color-text",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "#FF0000"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "#FF0000"
+                }
+            ]
+        }
+    ]
+}

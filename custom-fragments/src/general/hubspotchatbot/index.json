@@ -1,4 +1,19 @@
 {
-	"fieldSets": [
-	]
+    "fieldSets": [
+        {
+            "fields": [
+                {
+                    "name": "trackingCode",
+                    "label": "Tracking Code",
+                    "description": "tracking-code-text",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "8842647"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "8842647"
+                }
+            ]
+        }
+    ]
 }

@@ -1,8 +1,11 @@
-var editing = !!document.getElementsByClassName('has-edit-mode-menu').length;
+var editing = !!document.getElementsByClassName('page-editor').length;
 
-if (!editing) {
-	if (document.cookie.includes("consent=true")) {
-		var element = document.getElementById("cookieconsent");
-		element.classList.add("d-none");
-	}
+if (editing) {
+  //element.classList.remove("invisible");
+} else {
+  //element.classList.add("invisible");
+  if (document.cookie.includes("consent=true")) {
+	var element = document.getElementById("cookieconsent");
+	element.classList.add("d-none");
+  }
 }
