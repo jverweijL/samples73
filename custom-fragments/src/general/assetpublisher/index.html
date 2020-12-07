@@ -1,0 +1,13 @@
+<div class="assetpublisher">
+  [#assign assetPublisherPortletPreferences="<portlet-preferences>
+    <preference>
+        <name>delta</name>
+        <value>12</value>
+    </preference>
+</portlet-preferences>" /]
+  [@liferay_portlet["runtime"]
+    instanceId="${fragmentEntryLinkNamespace}assets"
+    portletName="com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet"
+    defaultPreferences="${assetPublisherPortletPreferences}"
+  /]
+</div>
