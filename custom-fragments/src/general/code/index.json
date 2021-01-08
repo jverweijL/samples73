@@ -1,0 +1,19 @@
+{
+    "fieldSets": [
+        {
+            "fields": [
+                {
+                    "name": "codeText",
+                    "label": "Code Text",
+                    "description": "code-text",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "curl -v"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "curl -v"
+                }
+            ]
+        }
+    ]
+}

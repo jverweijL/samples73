@@ -1,0 +1,13 @@
+.copycode {
+	margin: 20px;	
+}
+
+.code {
+	background: #000!important;
+	color: #fff;
+	height: 40px;
+	line-height: 40px;
+	font-weight: 550;
+	padding-left: 20px;
+	padding-right: 20px;
+}
