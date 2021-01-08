@@ -1,4 +1,43 @@
 {
-	"fieldSets": [
-	]
+    "fieldSets": [
+        {
+            "fields": [
+                {
+                    "name": "lat",
+                    "label": "Latitude",
+                    "description": "lat-text",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "52.08740741670078"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "52.08740741670078"
+                }
+                ,
+							{
+                    "name": "lon",
+                    "label": "Longitude",
+                    "description": "lon-text",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "5.112402858968131"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "5.112402858968131"
+                }
+							,
+							{
+                    "name": "zoom",
+                    "label": "Zoom",
+                    "description": "zoom-text",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "9"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "9"
+                }
+            ]
+        }
+    ]
 }
