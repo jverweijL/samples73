@@ -1,0 +1,31 @@
+{
+    "fieldSets": [
+        {
+            "fields": [
+                {
+                    "name": "from",
+                    "label": "From",
+                    "description": "from-text",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "0"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "0"
+                },
+							{
+                    "name": "to",
+                    "label": "To",
+                    "description": "to-text",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "100"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "100"
+                }
+                
+            ]
+        }
+    ]
+}
