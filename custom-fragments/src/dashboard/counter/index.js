@@ -11,5 +11,5 @@ function animateValue(obj, start, end, duration) {
   window.requestAnimationFrame(step);
 }
 
-const obj = fragmentElement.getElementsByClassName("counter-fragment")[0];
+const obj = fragmentElement.getElementsByClassName("counter")[0];
 animateValue(obj, parseInt(configuration.from), parseInt(configuration.to), 5000);

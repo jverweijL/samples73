@@ -1,0 +1,23 @@
+.fragment_430 {
+	background-color: #f6f8fa;
+	font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+	font-size: .9em;
+	padding-left: .6em;
+	padding-right: .6em;
+	border-radius: .4em;
+	font-weight: 600;
+	height: 3em;
+	line-height: 3em;
+	border: 1px solid silver;
+}
+
+.fragment_430>.code2-fragment{
+	clear: none;
+	width: calc(100% - 3em);
+  float: left;
+}
+
+.fragment_430>.code2-icon{
+	clear: none;
+  float: right;
+}

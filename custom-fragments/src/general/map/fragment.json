@@ -1,1 +1,9 @@
-{"configurationPath":"index.json","jsPath":"index.js","htmlPath":"index.html","cssPath":"index.css","name":"map","type":"component"}
+{
+    "configurationPath": "index.json",
+    "jsPath": "index.js",
+    "htmlPath": "index.html",
+    "cssPath": "index.css",
+    "name": "map",
+    "thumbnailPath": "thumbnail.png",
+    "type": "component"
+}

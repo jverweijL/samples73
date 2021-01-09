@@ -13,7 +13,7 @@
                     "dataType": "string",
                     "defaultValue": "0"
                 },
-							{
+                {
                     "name": "to",
                     "label": "To",
                     "description": "to-text",
@@ -23,8 +23,29 @@
                     },
                     "dataType": "string",
                     "defaultValue": "100"
+                },
+                {
+                    "name": "icon",
+                    "label": "Icon",
+                    "description": "icon-text",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "Check https://clayui.com/docs/components/icon.html"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "analytics"
+                },
+                {
+                    "name": "iconColor",
+                    "label": "Icon Color",
+                    "description": "iconcolor-text",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "#69A75A"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "#69A75A"
                 }
-                
             ]
         }
     ]

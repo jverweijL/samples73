@@ -1,3 +1,7 @@
-.counter-fragment {
-	font: 800 100px system-ui;
+.counter-fragment>.counter {
+	font: 800 4em system-ui;
+}
+
+.counter-fragment>.icon {
+	font: 800 40px system-ui;
 }
