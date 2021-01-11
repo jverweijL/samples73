@@ -1,0 +1,44 @@
+{
+    "fieldSets": [
+        {
+            "fields": [
+                {
+                    "name": "chartType",
+                    "label": "Type of Chart",
+                    "description": "type-of-chart",
+                    "type": "select",
+                    "dataType": "string",
+                    "typeOptions": {
+                        "validValues": [
+                            {"value": "Pie"},
+                            {"value": "Doughnut"}
+                        ]
+                    },
+                    "defaultValue": "Pie"
+                },
+							{
+                    "name": "backgroundColors",
+                    "label": "Background Colors",
+                    "description": "background-colors-text",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "Use rgb, hex or named colors"
+                    },
+                    "dataType": "string",
+                    "defaultValue": '"rgba(255, 99, 132, 0.8)","#FFCCEE"'
+                },
+							{
+                    "name": "labels",
+                    "label": "Labels",
+                    "description": "labels-text",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "Define labels"
+                    },
+                    "dataType": "string",
+                    "defaultValue": '"green","blue"'
+                }
+            ]
+        }
+    ]
+}
