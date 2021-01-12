@@ -12,4 +12,4 @@ function animateValue(obj, start, end, duration) {
 }
 
 const obj = fragmentElement.getElementsByClassName("counter")[0];
-animateValue(obj, parseInt(configuration.from), parseInt(configuration.to), 5000);
+animateValue(obj, parseInt(configuration.from), parseInt(configuration.to), 2000);
