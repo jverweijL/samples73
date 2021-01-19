@@ -1,0 +1,28 @@
+.feedback {
+  color: white;
+  background-color: blue;
+display:inline-block;
+padding: 10px;
+
+margin: 0;
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+
+  transform: rotate(-90deg);
+  /* Legacy vendor prefixes that you probably don't need... */
+  /* Safari */
+  -webkit-transform: rotate(-90deg);
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+  /* IE */
+  -ms-transform: rotate(-90deg);
+  /* Opera */
+  -o-transform: rotate(-90deg);
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+}
