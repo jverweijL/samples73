@@ -1,4 +1,15 @@
 {
-	"fieldSets": [
-	]
+    "fieldSets": [
+        {
+            "fields": [
+                {
+                    "name": "runOnce",
+                    "label": "Run Once",
+                    "description": "run-once",
+                    "type": "checkbox",
+                    "defaultValue": false
+                }
+            ]
+        }
+    ]
 }
