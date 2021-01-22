@@ -6,7 +6,7 @@ if (editing) {
 	element.classList.remove("invisible");
 } else {
 		element.classList.add("invisible");
-    if (configuration.runOnce) {
+    if (configuration.runOnce && document.cookie.includes(fragmentElement.id + "-guidedtour=true")) {
         // already ran before
     } else {
         introJs().setOptions({
@@ -15,9 +15,15 @@ if (editing) {
             }, {
                 element: document.querySelector('span.sign-in'),
                 intro: "Click here to login!"
+						},{
+							element: document.querySelector('#p_p_id_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_'),
+                intro: "This is the main menu"							
             },{
                 intro: "You are done"
             }]
-        }).start();
+        }).oncomplete(function() {
+					document.cookie = fragmentElement.id + "-guidedtour=true; expires=Thu, 18 Dec 2037 12:00:00 UTC";
+  
+}).start();
     }
 }
