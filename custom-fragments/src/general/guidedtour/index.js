@@ -15,15 +15,14 @@ if (editing) {
             }, {
                 element: document.querySelector('span.sign-in'),
                 intro: "Click here to login!"
-						},{
-							element: document.querySelector('#p_p_id_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_'),
+			},{
+				element: document.querySelector('#p_p_id_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_'),
                 intro: "This is the main menu"							
             },{
                 intro: "You are done"
             }]
         }).oncomplete(function() {
-					document.cookie = fragmentElement.id + "-guidedtour=true; expires=Thu, 18 Dec 2037 12:00:00 UTC";
-  
-}).start();
+			document.cookie = fragmentElement.id + "-guidedtour=true; expires=Thu, 18 Dec 2037 12:00:00 UTC";
+        }).start();
     }
 }
