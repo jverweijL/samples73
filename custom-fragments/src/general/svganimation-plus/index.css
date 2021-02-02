@@ -1,0 +1,64 @@
+body {
+    background: black;
+    padding: 0;
+    margin: 0;
+}
+circle {
+    fill: none;             
+    stroke-width: 10;
+    stroke-linecap: round;
+}
+circle { -webkit-transform-origin: center center; -moz-transform-origin: center center; transform-origin: center center;
+  -webkit-animation-duration: 3s; 
+-webkit-animation-timing-function: ease-in-out;
+-webkit-animation-iteration-count: infinite;}
+circle:nth-child(2)  { -webkit-animation-name:second; 
+                       -moz-animation:second  3s ease-in-out infinite; 
+                       animation:second  3s ease-in-out infinite;}
+circle:nth-child(3)  { -webkit-animation-name:third; -moz-animation:third   3s ease-in-out infinite; animation:third   3s ease-in-out infinite; }
+circle:nth-child(4)  { -webkit-animation-name:fourth; -moz-animation:fourth  3s ease-in-out infinite; animation:fourth  3s ease-in-out infinite; }
+circle:nth-child(5)  { -webkit-animation-name:fifth; -moz-animation:fifth   3s ease-in-out infinite; animation:fifth   3s ease-in-out infinite; }
+circle:nth-child(6)  { -webkit-animation-name:sixth; -moz-animation:sixth   3s ease-in-out infinite; animation:sixth   3s ease-in-out infinite; }
+circle:nth-child(7)  { -webkit-animation-name:seventh; -moz-animation:seventh 3s ease-in-out infinite; animation:seventh 3s ease-in-out infinite; }
+circle:nth-child(8)  { -webkit-animation-name:eighth; -moz-animation:eighth  3s ease-in-out infinite; animation:eighth  3s ease-in-out infinite; }
+circle:nth-child(9)  { -webkit-animation-name:ninth; -moz-animation:ninth   3s ease-in-out infinite; animation:ninth   3s ease-in-out infinite; }
+circle:nth-child(10) { 
+    -webkit-animation-name:tenth; 
+    -moz-animation:tenth   3s ease-in-out infinite; 
+    animation:tenth   3s ease-in-out infinite; 
+    -webkit-transform: rotate(10deg);}
+@-webkit-keyframes second {   0% { -webkit-transform:rotate(5deg)  }
+                            100% { -webkit-transform:rotate(15deg) } }
+@-webkit-keyframes third {  100% { -webkit-transform:rotate(20deg) } }
+@-webkit-keyframes fourth  {  0% { -webkit-transform:rotate(5deg)  }
+                            100% { -webkit-transform:rotate(35deg) } }
+@-webkit-keyframes fifth {  100% { -webkit-transform:rotate(40deg) } }
+@-webkit-keyframes sixth   {  0% { -webkit-transform:rotate(5deg)  }
+                            100% { -webkit-transform:rotate(55deg) } }
+@-webkit-keyframes seventh {100% { -webkit-transform:rotate(60deg) } }
+@-webkit-keyframes eighth  {  0% { -webkit-transform:rotate(5deg)  }
+                            100% { -webkit-transform:rotate(75deg) } }
+@-webkit-keyframes ninth  {   0% { -webkit-transform:rotate(0deg)  }
+                            100% { -webkit-transform:rotate(80deg) } }
+@-webkit-keyframes tenth  {   0% { -webkit-transform:rotate(5deg)  }
+                            100% { -webkit-transform:rotate(95deg) } }
+@-moz-keyframes second  {   0% { -moz-transform:rotate(5deg)  }
+                          100% { -moz-transform:rotate(15deg)  } }
+@-moz-keyframes third   { 100% { -moz-transform:rotate(20deg)  } }
+@-moz-keyframes fourth  {   0% { -moz-transform:rotate(5deg)  }
+                          100% { -moz-transform:rotate(35deg)  } }
+@-moz-keyframes fifth   { 100% { -moz-transform:rotate(40deg)  } }
+@-moz-keyframes sixth   {   0% { -moz-transform:rotate(5deg)  }
+                          100% { -moz-transform:rotate(55deg)  } }
+@-moz-keyframes seventh { 100% { -moz-transform:rotate(60deg)  } }
+@-moz-keyframes eighth  {   0% { -moz-transform:rotate(5deg)  }
+                          100% { -moz-transform:rotate(75deg) } }
+@-moz-keyframes ninth   { 100% { -moz-transform:rotate(80deg) } }
+@-moz-keyframes tenth   {   0% { -moz-transform:rotate(5deg)  }
+                          100% { -moz-transform:rotate(95deg) } }
+
+line {
+    stroke-width: 1;
+    -webkit-transform-origin: left center;
+    -webkit-transform: rotate(-10deg);
+}
