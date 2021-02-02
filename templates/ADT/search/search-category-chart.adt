@@ -1,0 +1,54 @@
+<#assign VOCABULARY_ID = 37841 />
+
+<#assign assetCategoryServiceUtil = serviceLocator.findService("com.liferay.asset.kernel.service.AssetCategoryLocalService") />
+
+<#if entries?has_content>
+<script>
+    generateddata${VOCABULARY_ID} = {
+        datasets: [{
+            label: 'Status',
+            backgroundColor: [
+                '#ff6384',
+                '#36a2eb',
+                '#cc65fe',
+                '#ffce56'
+            ],
+            data: [
+        	<#list entries as entry>
+        	    <#assign category = assetCategoryServiceUtil.getAssetCategory(entry.getAssetCategoryId()) />
+        	    <#if VOCABULARY_ID == category.getVocabularyId()>
+        	        ${entry.getFrequency()},
+        		</#if>
+        	</#list>
+            ]
+        }],
+        labels: [
+        <#list entries as entry>
+    	    <#assign category = assetCategoryServiceUtil.getAssetCategory(entry.getAssetCategoryId()) />
+    	    <#if VOCABULARY_ID == category.getVocabularyId()>
+                '${entry.getDisplayName()}',
+    		</#if>
+    	</#list>
+        ]
+    };
+</script>
+</#if>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha256-t9UJPrESBeG2ojKTIcFLPGF7nHi2vEc7f5A2KpH/UBU=" crossorigin="anonymous"></script>
+<div>
+	<canvas class="myStatusChart${VOCABULARY_ID}"></canvas>	
+</div>
+
+<script>
+    var chart = document.getElementsByClassName("myStatusChart${VOCABULARY_ID}")[0];
+    var ctx = chart.getContext('2d');
+
+    var myPieChart = new Chart(ctx, {
+        type: 'pie',
+        data: generateddata${VOCABULARY_ID},
+        options: {
+				responsive: true
+			}
+    });
+</script>

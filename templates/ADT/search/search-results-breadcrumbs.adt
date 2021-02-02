@@ -1,0 +1,25 @@
+<#assign layoutLocalService = serviceLocator.findService("com.liferay.portal.kernel.service.LayoutLocalService") />
+<#assign classNameLocalService = serviceLocator.findService("com.liferay.portal.kernel.service.ClassNameLocalService") />
+
+
+<#assign classNameId = classNameLocalService.getClassNameId("com.liferay.portal.kernel.model.Layout")/>
+
+<#if entries?has_content>
+	<#list entries as entry>
+	<#if entry.getClassName() == "com.liferay.portal.kernel.model.Layout">
+	    ${entry.getHighlightedTitle()} (${entry.classPK}/${entry.getClassName()}/${entry})
+	    ${classNameId}
+	    <#assign page = layoutLocalService.fetchLayout(classNameId, entry.classPK) />
+	    <!-- ${page.getName()} -->
+	    <#list page.getAncestors()?reverse as parent>
+            ${parent.getName()} >
+        </#list>
+
+
+	<#else>
+	    ${entry.getHighlightedTitle()}
+	</#if>
+	<br/>
+		
+	</#list>
+</#if>
