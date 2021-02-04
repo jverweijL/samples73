@@ -1,0 +1,27 @@
+.post-it-note {
+  padding: 2em;
+  background: #ffd707;
+  position: relative;
+  min-height: 10em;
+}
+
+.post-it-note:after {
+  content: "";
+  position: absolute;
+  bottom: -2em;
+  left: 0;
+  right: 2em;
+  border-width: 1em;
+  border-style: solid;
+  border-color: #ffd707;
+}
+
+.post-it-note:before {
+  content: "";
+  position: absolute;
+  bottom: -2em;
+  right: 0;
+  border-width: 2em 2em 0 0;
+  border-style: solid;
+  border-color: #d3b100 transparent;
+}
