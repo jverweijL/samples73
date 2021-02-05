@@ -1,0 +1,7 @@
+.fragment_gradient {
+	color: white;
+	background: rgb(2,0,36);
+  background: linear-gradient(50deg, rgba(2,0,36,1) 0%, rgba(56,18,247,1) 0%, rgba(215,35,183,1) 100%);
+	padding: 15px;
+	border-radius: 45px 15px 45px 45px; 
+}
