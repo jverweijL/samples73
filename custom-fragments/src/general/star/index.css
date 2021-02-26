@@ -1,0 +1,16 @@
+svg {
+  margin-bottom: 2em;
+}
+
+.rating-background {
+  fill: #FFE372;
+  stroke: red;
+  stroke-width: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.rating-value {
+  fill: #FFB94B;
+  height: 100%;
+}
