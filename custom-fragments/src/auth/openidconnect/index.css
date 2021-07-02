@@ -1,0 +1,12 @@
+.link-lookalike {
+    background: blue;
+    border: none;
+    color: white;
+    cursor: pointer;
+	  border-radius: 20px;
+}
+
+.link-lookalike:hover {
+    text-decoration: underline;
+    color: gray;
+}

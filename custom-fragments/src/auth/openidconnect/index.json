@@ -1,0 +1,30 @@
+{
+    "fieldSets": [
+        {
+            "fields": [
+                {
+                    "name": "buttonText",
+                    "label": "Button Text",
+                    "description": "button-text",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "Placeholder"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "Login with Google"
+                },
+							{
+                    "name": "providerName",
+                    "label": "OpenID Connect Provider Name",
+                    "description": "provider-name",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "Placeholder"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "Google"
+                }
+            ]
+        }
+    ]
+}

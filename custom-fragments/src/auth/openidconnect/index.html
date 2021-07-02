@@ -1,0 +1,23 @@
+<div id="div-openIdConnect">
+    <form id="login-openIdConnect" action="/web/guest/admin/-/login/openid_connect_request" method="POST">
+        <input 
+          type="hidden" 
+          name="_com_liferay_login_web_portlet_LoginPortlet_OPEN_ID_CONNECT_PROVIDER_NAME" 
+          value="${configuration.providerName}">
+        </input>
+        <input 
+          class="link-lookalike" 
+          id="_com_liferay_login_web_portlet_LoginPortlet_tpvb" 
+          type="button" 
+          onclick="submitOpenIdForm('login-openIdConnect')" 
+          value="${configuration.buttonText}">
+        </input>
+    </form>
+</div>
+
+<script>
+    function submitOpenIdForm(form){
+        Liferay.fire("loading", {showing:true})
+        document.getElementById(form).submit()
+    };
+</script>
