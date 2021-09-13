@@ -1,0 +1,118 @@
+{
+    "availableLanguageIds": [
+        "en_GB"
+    ],
+    "defaultLanguageId": "en_GB",
+    "fields": [
+        {
+            "label": {
+                "en_GB": "InvoiceID"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": false,
+            "name": "InvoiceID",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "OrderID"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": false,
+            "name": "OrderID",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_GB": "Status"
+            },
+            "options": [
+                {
+                    "value": "paid",
+                    "label": {
+                        "en_GB": "paid"
+                    }
+                },
+                {
+                    "value": "unpaid",
+                    "label": {
+                        "en_GB": "unpaid"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_GB": [
+                    "unpaid"
+                ]
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": false,
+            "name": "Status",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "select"
+        },
+        {
+            "label": {
+                "en_GB": "Amount"
+            },
+            "predefinedValue": {
+                "en_GB": ""
+            },
+            "style": {
+                "en_GB": ""
+            },
+            "tip": {
+                "en_GB": ""
+            },
+            "dataType": "double",
+            "fieldNamespace": "ddm",
+            "indexType": "",
+            "localizable": false,
+            "name": "Amount",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-decimal"
+        }
+    ]
+}

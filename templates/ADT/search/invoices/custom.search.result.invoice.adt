@@ -1,0 +1,84 @@
+<#assign _DLFileEntryLocalService = serviceLocator.findService("com.liferay.document.library.kernel.service.DLFileEntryLocalService") />
+
+<#assign _AssetEntryLocalService = serviceLocator.findService("com.liferay.asset.kernel.service.AssetEntryLocalService") />
+
+
+
+<!-- Creating a freemarker function in which will be used to get JournalArticle Custom Field by name -->
+<#function getFieldValue Fields fieldName>
+   <#list Fields as Field>
+       <#if Field.name==fieldName>
+           <#assign value=Field.getValue().getString(locale) />
+           <#return value />
+       </#if>
+   </#list>
+   <#return null />
+</#function>
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Invoice #</th>
+      <th scope="col">Order #</th>
+      <th scope="col">Name</th>
+      <th scope="col">Created</th>
+      <th scope="col">Status</th>
+      <th scope="col">View</th>
+    </tr>
+  </thead>
+  <tbody>
+
+<#if entries?has_content>
+	<#list entries as entry>
+        <tr>
+	    <#assign _DLFileEntry = _DLFileEntryLocalService.fetchDLFileEntry(entry.classPK)/>
+	    <#assign _assetEntry = _AssetEntryLocalService.getEntry("com.liferay.document.library.kernel.model.DLFileEntry",entry.classPK) />
+	    <#assign renderer=_assetEntry.getAssetRenderer() />
+	    <#assign ddmFormValuesReader=renderer.getDDMFormValuesReader() />
+	    
+	    <#assign dmText=ddmFormValuesReader.getDDMFormFieldValues( 'text' ) />
+	    <#assign dmSelect=ddmFormValuesReader.getDDMFormFieldValues( 'select' ) />
+	    <#assign invoiceID=getFieldValue(dmText, "InvoiceID" )! "" />
+	    <#assign orderID=getFieldValue(dmText, "OrderID" )! "" />
+	     <#assign status=getFieldValue(dmSelect, "Status" )! "" />
+	    
+	    
+        <td>${invoiceID}</td>
+        <td>${orderID}</td>
+        <td>${_assetEntry.getTitle()}</td>
+        <td>${entry.getCreationDateString()}</td>
+        <td>
+	        <#if status?contains("unpaid")>
+	            <span class="label label-danger">
+	                <span class="label-item label-item-expand">unpaid</span>
+                </span>
+            <#else>
+                <span class="label label-success">
+	                <span class="label-item label-item-expand">paid</span>
+                </span>
+            </#if>
+        </td>
+        <td>
+            <a class="btn btn-primary" href="?p_p_id=com_liferay_portal_search_web_search_results_portlet_SearchResultsPortlet_INSTANCE_penm&p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view&_com_liferay_portal_search_web_search_results_portlet_SearchResultsPortlet_INSTANCE_penm_mvcPath=%2Fview_content.jsp&_com_liferay_portal_search_web_search_results_portlet_SearchResultsPortlet_INSTANCE_penm_assetEntryId=${_assetEntry.getEntryId()}&_com_liferay_portal_search_web_search_results_portlet_SearchResultsPortlet_INSTANCE_penm_type=document&p_l_back_url=%2Fgroup%2Fgreif%2Finvoices">View</a>
+            <div style="display: none">
+	    ${_DLFileEntry.getTitle()}<br/>
+	    vId: ${_DLFileEntry.getFileVersion().getFileVersionId()}<br/>
+	    invoiceID: 
+	    
+		${entry.getHighlightedTitle()}<br/>
+		<div>${entry.getCreationDateString()}</div>
+		<div>${entry.classPK}</div><br/><br/>
+		</div>
+		</td>
+		</tr>
+	</#list>
+</#if>
+
+ </tbody>
+</table>
+<div style="display: none">
+https://webserver-lctgreifpoc-prd.lfr.cloud/group/greif/invoices?p_p_id=com_liferay_portal_search_web_search_results_portlet_SearchResultsPortlet_INSTANCE_penm&p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view&_com_liferay_portal_search_web_search_results_portlet_SearchResultsPortlet_INSTANCE_penm_mvcPath=%2Fview_content.jsp&_com_liferay_portal_search_web_search_results_portlet_SearchResultsPortlet_INSTANCE_penm_assetEntryId=238447&_com_liferay_portal_search_web_search_results_portlet_SearchResultsPortlet_INSTANCE_penm_type=document&p_l_back_url=%2Fgroup%2Fgreif%2Finvoices<br/>
+
+${searchResultsPortletDisplayContext}
+</div>

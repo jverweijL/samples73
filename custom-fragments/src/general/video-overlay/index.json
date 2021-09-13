@@ -1,0 +1,19 @@
+{
+    "fieldSets": [
+        {
+            "fields": [
+                {
+                    "name": "maskText",
+                    "label": "Mask Text",
+                    "description": "mask-text",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "Ocean"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "Ocean"
+                }
+            ]
+        }
+    ]
+}

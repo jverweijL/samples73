@@ -1,0 +1,28 @@
+@font-face {
+	 font-family: Biko;
+	 src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/biko-black.woff");
+}
+ 
+.fragment_1 video {
+	 width: 100%;
+}
+ svg {
+	 width: 100%;
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 height: 100%;
+}
+ svg text {
+	 font-family: Biko, sans-serif;
+	 font-weight: 700;
+	 text-transform: uppercase;
+	 font-size: 38px;
+}
+ svg rect {
+	 fill: white;
+}
+ svg > rect {
+	 -webkit-mask: url(#mask);
+	 mask: url(#mask);
+}
