@@ -11,7 +11,7 @@ if (editing) {
     } else {
         introJs().setOptions({
             steps: [{
-                intro: "Hello world!"
+                intro: "Welcome to the guided tour. "
             },{
                 intro: "We can do some intro here or ..."
             }, {

@@ -1,5 +1,12 @@
 # custom fragments
 
+## Create zipfile
+Create a .zip file that can be manually imported into Portal
+```
+npm run compress
+```
+## Basic info
+
 This project has been created with [generator-liferay-fragments][1]. You can read
 how to manage this project in the [generator documentation][2].
 
