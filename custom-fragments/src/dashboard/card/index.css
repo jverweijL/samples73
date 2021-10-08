@@ -1,0 +1,25 @@
+.card h1 {
+	text-align:center
+}
+
+.card .logo {
+	width: 64px;
+	height: 64px;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card img {
+	width: 64px;
+}
+.card .counter {
+	font-size: 5em;
+	text-align:center;
+	font-weight:bold
+}
+
+.card .action {
+	text-align:center;
+	color:silver;
+	font-size: 2em;
+}

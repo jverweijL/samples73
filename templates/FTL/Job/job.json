@@ -1,0 +1,300 @@
+{
+    "availableLanguageIds": [
+        "en_US"
+    ],
+    "defaultLanguageId": "en_US",
+    "fields": [
+        {
+            "label": {
+                "en_US": "Hours per week"
+            },
+            "options": [
+                {
+                    "value": "24",
+                    "label": {
+                        "en_US": "24 hours"
+                    }
+                },
+                {
+                    "value": "28",
+                    "label": {
+                        "en_US": "28 hours"
+                    }
+                },
+                {
+                    "value": "32",
+                    "label": {
+                        "en_US": "32 hours"
+                    }
+                },
+                {
+                    "value": "36",
+                    "label": {
+                        "en_US": "36 hours"
+                    }
+                },
+                {
+                    "value": "40",
+                    "label": {
+                        "en_US": "40 hours"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_US": [
+                    ""
+                ]
+            },
+            "style": {
+                "en_US": ""
+            },
+            "tip": {
+                "en_US": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": false,
+            "name": "HoursPerWeek",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "select"
+        },
+        {
+            "label": {
+                "en_US": "Closing Date"
+            },
+            "predefinedValue": {
+                "en_US": ""
+            },
+            "style": {
+                "en_US": ""
+            },
+            "tip": {
+                "en_US": "Applicants must respond before this"
+            },
+            "dataType": "date",
+            "fieldNamespace": "ddm",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "ClosingDate",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-date"
+        },
+        {
+            "label": {
+                "en_US": "Education Level"
+            },
+            "options": [
+                {
+                    "value": "master",
+                    "label": {
+                        "en_US": "Master degree"
+                    }
+                },
+                {
+                    "value": "bachelor",
+                    "label": {
+                        "en_US": "Bachelor degree"
+                    }
+                },
+                {
+                    "value": "intermediate",
+                    "label": {
+                        "en_US": "Intermediate degree"
+                    }
+                }
+            ],
+            "predefinedValue": {
+                "en_US": [
+                    ""
+                ]
+            },
+            "style": {
+                "en_US": ""
+            },
+            "tip": {
+                "en_US": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "multiple": false,
+            "name": "EducationLevel",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "select"
+        },
+        {
+            "label": {
+                "en_US": "Linkedin"
+            },
+            "predefinedValue": {
+                "en_US": ""
+            },
+            "style": {
+                "en_US": ""
+            },
+            "tip": {
+                "en_US": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Linkedin",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_US": "Facebook"
+            },
+            "predefinedValue": {
+                "en_US": ""
+            },
+            "style": {
+                "en_US": ""
+            },
+            "tip": {
+                "en_US": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Facebook",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_US": "Twitter"
+            },
+            "predefinedValue": {
+                "en_US": ""
+            },
+            "style": {
+                "en_US": ""
+            },
+            "tip": {
+                "en_US": ""
+            },
+            "dataType": "string",
+            "indexType": "keyword",
+            "localizable": true,
+            "name": "Twitter",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "text"
+        },
+        {
+            "label": {
+                "en_US": "Intro"
+            },
+            "predefinedValue": {
+                "en_US": ""
+            },
+            "style": {
+                "en_US": ""
+            },
+            "tip": {
+                "en_US": ""
+            },
+            "dataType": "string",
+            "indexType": "text",
+            "localizable": true,
+            "name": "Intro",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "textarea"
+        },
+        {
+            "label": {
+                "en_US": "Description"
+            },
+            "predefinedValue": {
+                "en_US": ""
+            },
+            "style": {
+                "en_US": ""
+            },
+            "tip": {
+                "en_US": ""
+            },
+            "dataType": "html",
+            "fieldNamespace": "ddm",
+            "indexType": "text",
+            "localizable": true,
+            "name": "Description",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-text-html"
+        },
+        {
+            "label": {
+                "en_US": "Profile"
+            },
+            "predefinedValue": {
+                "en_US": ""
+            },
+            "style": {
+                "en_US": ""
+            },
+            "tip": {
+                "en_US": "what we are looking for/need"
+            },
+            "dataType": "html",
+            "fieldNamespace": "ddm",
+            "indexType": "text",
+            "localizable": true,
+            "name": "Profile",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-text-html"
+        },
+        {
+            "label": {
+                "en_US": "Offer"
+            },
+            "predefinedValue": {
+                "en_US": ""
+            },
+            "style": {
+                "en_US": ""
+            },
+            "tip": {
+                "en_US": "what we offer"
+            },
+            "dataType": "html",
+            "fieldNamespace": "ddm",
+            "indexType": "text",
+            "localizable": true,
+            "name": "Offer",
+            "readOnly": false,
+            "repeatable": false,
+            "required": false,
+            "showLabel": true,
+            "type": "ddm-text-html"
+        }
+    ]
+}
